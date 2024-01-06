@@ -35,10 +35,13 @@ async function loadMonthlyPrice() {
 
   let dates = Object.keys(timeSeriesData).slice(0, 24);
   months = [...dates];
+  months.reverse();
+
   for (let i = 0; i < dates.length; i++) {
     let datesElement = dates[i];
     let closingPrice = timeSeriesData[datesElement][THIRD_LAYER];
     monthlyClosePrices.push(closingPrice);
+    monthlyClosePrices.reverse();
   }
 
   console.log(monthlyClosePrices);

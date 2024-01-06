@@ -25,6 +25,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  overflow: hidden;
   margin: 0;
   background-color: var(--background) !important;
 }
@@ -34,8 +35,12 @@ body {
   border-color: var(--primary) !important;
   color: var(--text) !important;
   box-shadow: var(--shadow-elevation-medium);
-  margin: 0 auto;
-  width: 80% !important;
+  margin: 0 4rem;
+  width: clamp(18.75rem, 40.641vw + 10.622rem, 98rem);
+}
+
+canvas {
+  width: 100%;
 }
 
 p {
